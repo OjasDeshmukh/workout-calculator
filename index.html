@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Workout Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1 id="wrkCalcHead">Workout Calculator</h1>
+
+    <div id="exInput">
+        <div class="field-group">
+            <label class="field-label" for="exerciseName">Exercise Name</label>
+            <input type="text" id="exerciseName" class="exName" placeholder="e.g. Bench Press">
+        </div>
+
+        <div class="field-group">
+            <label class="field-label" for="Weight">Weight</label>
+            <input type="text" id="Weight" class="weight" placeholder="e.g. 135 lbs">
+        </div>
+
+        <div class="field-group">
+            <label class="field-label" for="Reps">Reps</label>
+            <input type="text" id="Reps" class="reps" placeholder="e.g. 10">
+        </div>
+
+        <button type="button" id="enterBtn">Enter</button>
+        <button type="button" id="resetBtn">Reset</button>
+    </div>
+
+    <div id="results">
+        <div class="result-item">
+            <span class="result-label">Volume</span>
+            <span class="result-value" id="volumeDisplay">0</span>
+        </div>
+        <div class="result-item">
+            <span class="result-label">One Rep Max</span>
+            <span class="result-value" id="ormDisplay">0</span>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
