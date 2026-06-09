@@ -12,6 +12,13 @@ document.getElementById("enterBtn").onclick = function volumeCalc() {
     //orm calculation
     oneRepMax = weight * (1 + (reps/30));
 
+    //fixes error in Epley formula used to calculate orm
+    if (reps === 0)
+        oneRepMax = 0;
+
+    if (reps === 1)
+        oneRepMax = weight;
+
     //update volume number
     document.getElementById("volumeDisplay").textContent = volume;
 
